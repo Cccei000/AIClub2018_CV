@@ -24,7 +24,7 @@
 
 ### About the dataset:
 1. ILSVRC: 1000 images in each of the 1000 classes.  
--**single-labeled or muti-labeled:** muti-labeled
+-**single-labeled or multi-labeled?**  
 > For each image, algorithms will produce a list of at most 5 object categories in the descending order of confidence. The quality of a labeling will be evaluated based on the label that best matches the ground truth label for the image. The idea is to allow an algorithm to identify multiple objects in an image and not be penalized if one of the objects identified was in fact present, but not included in the ground truth.  
 > The ground truth labels for the image are gk, k=1,...,n with n objects labeled.   
 > From [ILSVRC2010](http://image-net.org/challenges/LSVRC/2010/)
@@ -35,17 +35,25 @@
 
 ### Architecture:
 ![architecture](https://github.com/Cei1ing/AIClub2018_CV/blob/master/AlexNet/Architecture.JPG?raw=true)
+* The kernels of the second, fourth, and fifth convolutional layers are connected only to kernel maps in the previous layer on the same GPU.
+* Response-normalization layers follow the first and second convolutional layers. 
+* Max-pooling layers follow response-normalization layers and the fifth convolutional layer.
+* ReLU non-linearity is applied to the output of every learnable layer.  
+* Dropout in the first two fully-connected layers.
+-**why this structure?**  
 
 # Features:
 ### 1. ReLU:
 * Two concepts: saturating nonlinearity, non-saturating nonlinearity.
 * In terms of training time with gradient descent, saturating nonlinearities are much slower than the non-saturating nonlinearity Relu function f(x) = max(0; x).  
 -**why?**
+
 ### 2. GPUs:
 * The GPUs communicate only in certain layers.
 * Some kernels only take input from kernels on the same GPU.  
 -**why a problem for cross-validation?**  
--**what does it mean by independent columns?**  
+-**what does it mean by independent columns?**
+
 ### 3. Local Response Normalization:
 * Loacl normaliztion scheme still aids gerneralization, despite ReLUs' desirable property.
 * It normalizes the original output of each channel with several adjacent outputs of spatially corresponding position across channels.  
@@ -54,6 +62,21 @@
 -**what's this:** imitate the local competition between biological neurons, stress the higher response. 
 * Resemble local contrast normalization.  
 -**what's this:** subsract the weighted averge of adjacent region across channels and then divided by variance.  
+* Applied after certain layers' RuLU.
+
 ### 4. Overlapping Pooling:
 * More difficult to overfit with overlapping pooling.  
--**why?**
+-**why?**  
+
+### 5. Data Augmentation:
+* To reduce overfitting, generated on the CPU, computationally free.
+* Scheme one: train on randomly extracted patches and their horizontal reflections, test on certain patches and averge the softmax predictions.
+* Scheme two: perform PCA on the set of RGB pixel values throughout the training set.
+
+### 6. Dropout:
+* Set to zero the output of each hidden neuron with a certain probability.
+* Reduces complex co-adaptations of neurons, learn more robust features.
+* The paper just multiplies the outputs of all neurons by 0.5 to approximate the geometric mean of exponentially-many dropout networks.  
+-**why is that?**
+
+
