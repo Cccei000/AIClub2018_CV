@@ -24,6 +24,7 @@
 
 ### About the dataset:
 1. ILSVRC: 1000 images in each of the 1000 classes.
+-**single-labeled or muti-labeled?**
 2. 2010: available labels, 2012: unavailble labels.
 3. top-1, top-5.
 4. Rescale images and crop out the centeral patch.  
@@ -46,6 +47,9 @@
 * Loacl normaliztion scheme still aids gerneralization, despite ReLUs' desirable property.
 * It normalizes the original output of each channel with several adjacent outputs of spatially corresponding position across channels.
 * A form of lateral inhibition.  
--**what's that:** imitate the local competition between biological neurons, stress the higher response. 
+-**what's this:** imitate the local competition between biological neurons, stress the higher response. 
 * Resemble local contrast normalization.  
--**what's that:** subsract the weighted averge of adjacent region across channels and then divided by variance.
+-**what's this:** subsract the weighted averge of adjacent region across channels and then divided by variance.
+### 4. Overlapping Pooling:
+* More difficult to overfit with overlapping pooling.
+-**why?**
