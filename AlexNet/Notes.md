@@ -27,7 +27,7 @@
 1. [ILSVRC2010](http://image-net.org/challenges/LSVRC/2010/): 1000 images in each of the 1000 classes, one ground truth label per image.
 2. 2010: available test labels, 2012: unavailble test labels.
 3. top-1, top-5.
-4. Rescale images, crop out the centeral patch, and *subtracting the mean activity*?
+4. Rescale images, crop out the centeral patch, and ***subtracting the mean activity***?
 
 ### Architecture:
 ![architecture](https://github.com/Cei1ing/AIClub2018_CV/blob/master/AlexNet/Architecture.JPG?raw=true)
@@ -35,9 +35,10 @@
 * Response-normalization layers follow the first and second convolutional layers. 
 * Max-pooling layers follow response-normalization layers and the fifth convolutional layer.
 * ReLU non-linearity is applied to the output of every learnable layer.  
-* Dropout in the first two fully-connected layers.
-* Softmax produces the final distribution.  
--**why this structure?**  
+* Dropout in the first two fully-connected layers.  
+-**why the architecture above?**
+* Softmax produces the final distribution.
+* ***Maximizes the multinomial logistic regression objective?***
 
 # Features:
 ### 1. ReLU:
