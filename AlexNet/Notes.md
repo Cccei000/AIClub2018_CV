@@ -23,9 +23,10 @@
 4. Discovery on an important depth.
 
 ### About the dataset:
-1. ILSVRC: 1000 images in each of the 1000 classes.
+1. ILSVRC: 1000 images in each of the 1000 classes.  
 -**single-labeled or muti-labeled?**
-2. 2010: available labels, 2012: unavailble labels.
+> http://image-net.org/challenges/LSVRC/2010/: For each image, algorithms will produce a list of at most 5 object categories in the descending order of confidence. The quality of a labeling will be evaluated based on the label that best matches the ground truth label for the image. The idea is to allow an algorithm to identify multiple objects in an image and not be penalized if one of the objects identified was in fact present, but not included in the ground truth.
+2. 2010: available test labels, 2012: unavailble test labels.
 3. top-1, top-5.
 4. Rescale images and crop out the centeral patch.  
 -**does interpolation matter?**
@@ -51,5 +52,5 @@
 * Resemble local contrast normalization.  
 -**what's this:** subsract the weighted averge of adjacent region across channels and then divided by variance.
 ### 4. Overlapping Pooling:
-* More difficult to overfit with overlapping pooling.
+* More difficult to overfit with overlapping pooling.  
 -**why?**
