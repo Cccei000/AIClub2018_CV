@@ -42,14 +42,10 @@
 * Some kernels only take input from kernels on the same GPU.  
 -**why a problem for cross-validation?**  
 -**what does it mean by independent columns?**  
-111
 ### 3. Local Response Normalization:
 * Loacl normaliztion scheme still aids gerneralization, despite ReLUs' desirable property.
 * It normalizes the original output of each channel with several adjacent outputs of spatially corresponding position across channels.
 * A form of lateral inhibition.  
--**what's that**
+-**what's that:** imitate the local competition between biological neurons, stress the higher response. 
 * Resemble local contrast normalization.  
--**what's that**
-
-
-
+-**what's that:** subsract the weighted averge of adjacent region across channels and then divided by variance.
