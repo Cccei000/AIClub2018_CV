@@ -26,7 +26,7 @@
 4. Rescale images and crop out the centeral patch. -**does interpolation matter?**
 
 ### Architecture:
-![architecture](https://raw.githubusercontent.com/Cei1ing/AIClub2018_CV/master/ImageNet%20Classification%20with%20Deep%20Convolutional%20Neural%20Networks/CNN.JPG)
+![architecture](https://github.com/Cei1ing/AIClub2018_CV/blob/master/AlexNet/Architecture.JPG?raw=true)
 
 # Features:
 ### 1. ReLU:
