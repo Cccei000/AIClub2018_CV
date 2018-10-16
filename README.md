@@ -1,2 +1,2 @@
 # AIClub2018_CV
-Code for the CV department of 2018 AI club
+Codes and notes for the CV department of 2018 AI club
