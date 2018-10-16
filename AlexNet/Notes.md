@@ -24,15 +24,17 @@
 
 ### About the dataset:
 1. ILSVRC: 1000 images in each of the 1000 classes.  
--**single-labeled or muti-labeled?**
-> http://image-net.org/challenges/LSVRC/2010/: For each image, algorithms will produce a list of at most 5 object categories in the descending order of confidence. The quality of a labeling will be evaluated based on the label that best matches the ground truth label for the image. The idea is to allow an algorithm to identify multiple objects in an image and not be penalized if one of the objects identified was in fact present, but not included in the ground truth.
+-**single-labeled or muti-labeled:** muti-labeled
+> For each image, algorithms will produce a list of at most 5 object categories in the descending order of confidence. The quality of a labeling will be evaluated based on the label that best matches the ground truth label for the image. The idea is to allow an algorithm to identify multiple objects in an image and not be penalized if one of the objects identified was in fact present, but not included in the ground truth.  
+> The ground truth labels for the image are gk, k=1,...,n with n objects labeled.   
+> ![ILSVRC2010](http://image-net.org/challenges/LSVRC/2010/)
 2. 2010: available test labels, 2012: unavailble test labels.
 3. top-1, top-5.
 4. Rescale images and crop out the centeral patch.  
 -**does interpolation matter?**
 
 ### Architecture:
-![architecture](https://github.com/Cei1ing/AIClub2018_CV/blob/master/AlexNet/Architecture.JPG?raw=true)
+[architecture](https://github.com/Cei1ing/AIClub2018_CV/blob/master/AlexNet/Architecture.JPG?raw=true)
 
 # Features:
 ### 1. ReLU:
