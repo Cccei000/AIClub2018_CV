@@ -83,4 +83,12 @@
 * ***Weight decay here is not just a regularizer, it reduces the model's training error?***
 * Learning rate 0.01, divided by 10 when validation error rate stops improving.
 
-
+# Improvements:
+Referring to ZFNet:  
+* Smaller filters in conv1: cover mid frequencies.
+* Smaller strides in conv1: reduce overlapping.
+* Depth of the model is important for obtaining good performance.
+* Increasing the size of the middle convolution layers gives a gain in performance.
+* But increasing these and enlarging the fully connected layers results in over-fitting.
+* The model is truly localizing the objects within the scene.
+* A different loss function that permits multiple objects per image may improve performance.
