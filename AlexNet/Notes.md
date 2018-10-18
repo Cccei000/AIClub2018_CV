@@ -36,7 +36,8 @@
 * Max-pooling layers follow response-normalization layers and the fifth convolutional layer.
 * ReLU non-linearity is applied to the output of every learnable layer.  
 * Dropout in the first two fully-connected layers.  
--**why the architecture above?**
+-**why the architecture above?**  
+-**how to improve it?**
 * Softmax produces the final distribution.
 * ***Maximizes the multinomial logistic regression objective?***
 
@@ -76,3 +77,10 @@
 * Reduces complex co-adaptations of neurons, learn more robust features.
 * The paper just multiplies the outputs of all neurons by 0.5 to approximate the geometric mean of various dropout networks.  
 -**why is this reasonable?**
+
+### 7. Learning:
+* SGD, batch size 128, momentum 0.9, weight decay 0.0005.
+* ***Weight decay here is not just a regularizer, it reduces the model's training error?***
+* Learning rate 0.01, divided by 10 when validation error rate stops improving.
+
+
