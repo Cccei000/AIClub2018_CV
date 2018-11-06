@@ -58,7 +58,7 @@
 3. 上述观察至少说明绝对均值做惩罚项是达不到预期目标的了，索性用L2做惩罚项，结果效果极佳。并且使用截断对成功率和L2的影响微弱，但使得噪声散漫，易于观测。而对L2损失项进行系数修正只会对L2和成功率有不显著或更差的效果.
 * 最终在1000张图像上测试的攻击成功率达到99%，成功案例的平均L2范数为2.280，为了达到这个效果每个样本的训练只需100个iteration.
 * 一个成功案例：真实标签为6，目标标签为8，CNN预测标签为8，噪声L2范数为1.01，相当于256灰度级下的257.6。从左到右分别为原始图像、对抗样本、噪声图像，可以看出噪声似乎“有意图地”把6变成8，这是符合预期的：
-![](https://raw.githubusercontent.com/Cei1ing/AIClub2018_CV/master/Adversarial%20Examples/v1_plus.jpg)  
+![](https://raw.githubusercontent.com/Cei1ing/AIClub2018_CV/master/Adversarial%20Examples/adversarial_v3.jpg)  
 
 ### 问题：
 1. 如何解释归一化的效果和截断的损害？
