@@ -30,7 +30,7 @@
 4. Rescale images, crop out the centeral patch, and ***subtracting the mean activity***?
 
 ### Architecture:
-![architecture](https://github.com/Cei1ing/AIClub2018_CV/blob/master/AlexNet/Architecture.JPG?raw=true)
+![architecture](https://github.com/Cei1ing/AIClub2018_CV/blob/master/Paper/AlexNet.JPG?raw=true)
 * The kernels of the second, fourth, and fifth convolutional layers are connected only to kernel maps in the previous layer on the same GPU.
 * Response-normalization layers follow the first and second convolutional layers. 
 * Max-pooling layers follow response-normalization layers and the fifth convolutional layer.
