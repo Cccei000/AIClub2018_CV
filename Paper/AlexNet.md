@@ -27,7 +27,7 @@
 1. [ILSVRC2010](http://image-net.org/challenges/LSVRC/2010/): 1000 images in each of the 1000 classes, one ground truth label per image.
 2. 2010: available test labels, 2012: unavailble test labels.
 3. top-1, top-5.
-4. Rescale images, crop out the centeral patch, and ***subtracting the mean activity***?
+4. Rescale images, crop out the centeral patch, and subtracting the mean value.
 
 ### Architecture:
 ![architecture](https://github.com/Cei1ing/AIClub2018_CV/blob/master/Paper/AlexNet.JPG?raw=true)
