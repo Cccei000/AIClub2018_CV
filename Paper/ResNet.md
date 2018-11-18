@@ -7,7 +7,11 @@
 * Applying shortcuts.  
 -***how is this implemented when dimensions increase?***
 
-### Deeper Bottleneck Architectures：
+### Basicblock Architecture:
+* For each residual function F, use a stack of 2 layers.
+* The two layers are 3x3x64 and 3x3x64 convolutions.
+
+### Bottleneck Architecture：
 * For each residual function F, use a stack of 3 layers instead of 2. 
-* The three layers are 1×1, 3×3, and 1×1 convolutions。
+* The three layers are 1×1x64, 3×3x64, and 1×1x64 convolutions.
 * 1×1 layers are responsible for reducing and then increasing dimensions, leaving the 3×3 layer smaller input/output dimensions.
