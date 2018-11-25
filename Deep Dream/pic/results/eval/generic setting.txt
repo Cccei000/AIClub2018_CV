@@ -1,0 +1,1 @@
+Dreamer.dreamer(model,input_np,zoom_n = 6,zoom_ratio = 0.7,train = False,epochs = 30,max_jitter = 20,trg_layer = n,lr = 0.01)
